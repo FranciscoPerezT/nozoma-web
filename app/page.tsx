@@ -16,7 +16,7 @@ export default function Home() {
           <li><a href="#cursos">Cursos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://xlcurso.vercel.app" className="btn-nav-cta">Ingresar a cursos →</a>
+        <a href="https://cursos.nozoma.cl" className="btn-nav-cta">Ingresar a cursos →</a>
         <button className="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span /><span /><span />
         </button>
@@ -26,7 +26,7 @@ export default function Home() {
         <a href="#equipo">Equipo</a>
         <a href="#cursos">Cursos</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://xlcurso.vercel.app" className="drawer-cta">Ingresar a cursos →</a>
+        <a href="https://cursos.nozoma.cl" className="drawer-cta">Ingresar a cursos →</a>
       </div>
 
       {/* ═══ HERO ══════════════════════════════════════════════ */}
@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="cursos-title">Tu próxima clase<br />ya está lista</div>
                 <p className="cursos-sub">Sigue aprendiendo con contenido diseñado para contextos reales. Con seguimiento de progreso y soporte directo.</p>
               </div>
-              <a href="https://xlcurso.vercel.app" className="btn-cursos">Acceder a la plataforma →</a>
+              <a href="https://cursos.nozoma.cl" className="btn-cursos">Acceder a la plataforma →</a>
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function Home() {
           <div className="footer-col">
             <div className="footer-col-title">Contacto</div>
             <a href="mailto:contacto@nozoma.cl">contacto@nozoma.cl</a>
-            <a href="https://xlcurso.vercel.app">Plataforma xlcurso</a>
+            <a href="https://cursos.nozoma.cl">Plataforma xlcurso</a>
           </div>
           <div className="footer-col">
             <div className="footer-col-title">Legal</div>
