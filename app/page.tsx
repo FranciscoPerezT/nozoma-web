@@ -16,7 +16,7 @@ export default function Home() {
           <li><a href="#cursos">Cursos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://xlcurso.vercel.app" className="btn-nav-cta">Ingresar a xlcursos →</a>
+        <a href="https://xlcurso.vercel.app" className="btn-nav-cta">Ingresar a cursos →</a>
         <button className="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span /><span /><span />
         </button>
@@ -26,7 +26,7 @@ export default function Home() {
         <a href="#equipo">Equipo</a>
         <a href="#cursos">Cursos</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://xlcurso.vercel.app" className="drawer-cta">Ingresar a xlcursos →</a>
+        <a href="https://xlcurso.vercel.app" className="drawer-cta">Ingresar a cursos →</a>
       </div>
 
       {/* ═══ HERO ══════════════════════════════════════════════ */}
