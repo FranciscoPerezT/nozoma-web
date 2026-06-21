@@ -152,6 +152,37 @@ export default function NozomaScripts() {
     initSlider()
     window.addEventListener('resize', initSlider)
 
+    /* ── HERO CAROUSEL ── */
+    ;(function () {
+      const heroSlides = document.querySelectorAll<HTMLElement>('.hero-slide')
+      const heroPrev = document.getElementById('heroPrev') as HTMLButtonElement
+      const heroNext = document.getElementById('heroNext') as HTMLButtonElement
+      if (!heroSlides.length || !heroPrev || !heroNext) return
+      let currentHeroSlide = 0
+
+      function heroGoSlide(n: number) {
+        if (n < 0 || n >= heroSlides.length || n === currentHeroSlide) return
+        heroSlides[currentHeroSlide].classList.remove('active')
+        currentHeroSlide = n
+        heroSlides[currentHeroSlide].classList.add('active')
+        document.querySelectorAll<HTMLButtonElement>('.hero-dot').forEach(d => {
+          d.classList.toggle('active', parseInt(d.dataset.slide || '0') === n)
+        })
+        heroPrev.style.display = n === 0 ? 'none' : 'flex'
+        heroNext.style.display = n === heroSlides.length - 1 ? 'none' : 'flex'
+      }
+
+      heroPrev.addEventListener('click', () => heroGoSlide(currentHeroSlide - 1))
+      heroNext.addEventListener('click', () => heroGoSlide(currentHeroSlide + 1))
+      document.querySelectorAll<HTMLButtonElement>('.hero-dot').forEach(d => {
+        d.addEventListener('click', () => heroGoSlide(parseInt(d.dataset.slide || '0')))
+      })
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') heroGoSlide(currentHeroSlide + 1)
+        if (e.key === 'ArrowLeft')  heroGoSlide(currentHeroSlide - 1)
+      })
+    })()
+
     /* ── REVEAL ── */
     const reveals  = document.querySelectorAll('.reveal')
     const revealOb = new IntersectionObserver(entries => {
@@ -178,7 +209,40 @@ export default function NozomaScripts() {
     const counterOb = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('[data-target]').forEach(animateCounter); counterOb.unobserve(e.target) } })
     }, { threshold: 0.3 })
-    document.querySelectorAll('.caso-metrics').forEach(el => counterOb.observe(el))
+    document.querySelectorAll('.caso-slide.active .caso-metrics').forEach(el => counterOb.observe(el))
+
+    /* ── CASO CAROUSEL ── */
+    ;(function () {
+      const casoSlides = document.querySelectorAll<HTMLElement>('.caso-slide')
+      const casoPrev = document.getElementById('casoPrev') as HTMLButtonElement
+      const casoNext = document.getElementById('casoNext') as HTMLButtonElement
+      if (!casoSlides.length || !casoPrev || !casoNext) return
+      let currentCasoSlide = 0
+      const casoSlideAnimated = new Array(casoSlides.length).fill(false)
+      casoSlideAnimated[0] = true
+
+      function casoGoSlide(n: number) {
+        if (n < 0 || n >= casoSlides.length || n === currentCasoSlide) return
+        casoSlides[currentCasoSlide].classList.remove('active')
+        currentCasoSlide = n
+        casoSlides[currentCasoSlide].classList.add('active')
+        document.querySelectorAll<HTMLButtonElement>('.caso-dot').forEach(d => {
+          d.classList.toggle('active', parseInt(d.dataset.slide || '0') === n)
+        })
+        casoPrev.style.display = n === 0 ? 'none' : 'flex'
+        casoNext.style.display = n === casoSlides.length - 1 ? 'none' : 'flex'
+        if (!casoSlideAnimated[n]) {
+          casoSlideAnimated[n] = true
+          casoSlides[n].querySelectorAll('[data-target]').forEach(animateCounter)
+        }
+      }
+
+      casoPrev.addEventListener('click', () => casoGoSlide(currentCasoSlide - 1))
+      casoNext.addEventListener('click', () => casoGoSlide(currentCasoSlide + 1))
+      document.querySelectorAll<HTMLButtonElement>('.caso-dot').forEach(d => {
+        d.addEventListener('click', () => casoGoSlide(parseInt(d.dataset.slide || '0')))
+      })
+    })()
 
     /* ── FORMULARIO ── */
     const form = document.querySelector<HTMLFormElement>('.contact-form')

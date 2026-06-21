@@ -16,7 +16,7 @@ export default function Home() {
           <li><a href="#cursos">Cursos</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://cursos.nozoma.cl" className="btn-nav-cta">Ingresar a cursos →</a>
+        <a href="https://cursos.nozoma.cl" className="btn-nav-cta">Ingresar a Nozoma Cursos →</a>
         <button className="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span /><span /><span />
         </button>
@@ -26,7 +26,7 @@ export default function Home() {
         <a href="#equipo">Equipo</a>
         <a href="#cursos">Cursos</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://cursos.nozoma.cl" className="drawer-cta">Ingresar a cursos →</a>
+        <a href="https://cursos.nozoma.cl" className="drawer-cta">Ingresar a Nozoma Cursos →</a>
       </div>
 
       {/* ═══ HERO ══════════════════════════════════════════════ */}
@@ -35,61 +35,105 @@ export default function Home() {
         <div className="hero-mesh-overlay" aria-hidden="true" dangerouslySetInnerHTML={{ __html: MESH_SVG }} />
         <div className="hero-inner">
           <h1 className="hero-seo-h1">Automatización de procesos y reportería a medida — Santiago, Chile</h1>
-          <div className="hero-tag">
-            <span className="hero-tag-dot" />
-            Nuevo · Plataforma de cursos online
-          </div>
-          <p className="hero-display">
-            Procesos que<br />
-            se hacen <span className="hl-proceso">solos.</span><br />
-            Decisiones que<br />
-            se toman <span className="hl-conexion">rápido.</span>
-          </p>
-          <p className="hero-sub">
-            Convertimos flujos manuales en sistemas automáticos.<br />
-            <span className="bright">— Sin cambiar tu ERP. Sin teoría vacía. —</span>
-          </p>
 
-          {/* pills desktop */}
-          <div className="hero-pills-wrap">
-            <div className="hero-pills-label">Trabajamos con</div>
-            <div className="hero-pills">
-              <span className="pill">Tesorería<span className="pill-tip">Gestión de flujos de caja, pagos y cobranzas. Automatizamos los procesos de conciliación y reportes que consumen horas diarias en equipos financieros.</span></span>
-              <span className="pill">Finanzas<span className="pill-tip">Análisis financiero, presupuestos y proyecciones. Conectamos tus datos en dashboards que se actualizan solos, sin exportaciones manuales.</span></span>
-              <span className="pill">Operaciones<span className="pill-tip">Procesos logísticos, inventario y coordinación de equipos. Convertimos flujos manuales repetitivos en sistemas automáticos.</span></span>
-              <span className="pill">ERP<span className="pill-tip">Sistemas como SAP, Oracle o Dynamics. Nos integramos a tu plataforma actual sin necesidad de reemplazarla.</span></span>
-              <span className="pill">Power BI<span className="pill-tip">Herramienta de visualización de Microsoft. Construimos reportes interactivos conectados directamente a tus fuentes de datos.</span></span>
-            </div>
-          </div>
+          <div className="hero-slides">
+            <button className="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Slide anterior" style={{ display: 'none' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button className="hero-arrow hero-arrow-next" id="heroNext" aria-label="Siguiente slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
 
-          {/* slider servicios mobile */}
-          <div className="hero-service-slider" id="serviceSlider" aria-label="Servicios de Nozoma">
-            <div className="hero-service-slide active" role="group" aria-label="Servicio 1 de 5">
-              <div className="slide-title">Tesorería</div>
-              <p className="slide-desc">Gestión de flujos de caja, pagos y cobranzas. Automatizamos la conciliación y reportes que consumen horas diarias.</p>
+            {/* SLIDE 1: Portafolio con Propósito */}
+            <div className="hero-slide active" id="heroSlide0">
+              <img className="hero-pcp-logo" src="/pcp-logo.png" alt="Portafolio con propósito" />
+              <div className="hero-pcp-tag">
+                <span className="hero-tag-dot" />
+                En curso · Evaluación Docente 2026
+              </div>
+              <p className="hero-pcp-display">
+                Evaluación docente,<br />
+                <span className="hl-proceso">sin la carga administrativa.</span>
+              </p>
+              <p className="hero-pcp-sub">
+                La plataforma que acompaña a los y las docentes durante todo el proceso de Evaluación Docente — desde la Clase Grabada hasta el Portafolio, mes a mes y con foco en lo que realmente importa: enseñar.
+              </p>
+              <div className="hero-pcp-features">
+                <span className="hero-pcp-feature">Clase Grabada</span>
+                <span className="hero-pcp-feature">Portafolio digital</span>
+                <span className="hero-pcp-feature">Evaluaciones en línea</span>
+                <span className="hero-pcp-feature">Seguimiento mensual</span>
+              </div>
+              <div className="hero-dots">
+                <button className="hero-dot active" data-slide="0" aria-label="Ver Portafolio con Propósito" />
+                <button className="hero-dot" data-slide="1" aria-label="Ver Nozoma" />
+              </div>
             </div>
-            <div className="hero-service-slide" role="group" aria-label="Servicio 2 de 5">
-              <div className="slide-title">Finanzas</div>
-              <p className="slide-desc">Análisis financiero, presupuestos y proyecciones. Dashboards que se actualizan solos, sin exportaciones manuales.</p>
-            </div>
-            <div className="hero-service-slide" role="group" aria-label="Servicio 3 de 5">
-              <div className="slide-title">Operaciones</div>
-              <p className="slide-desc">Procesos logísticos, inventario y coordinación. Flujos manuales repetitivos convertidos en sistemas automáticos.</p>
-            </div>
-            <div className="hero-service-slide" role="group" aria-label="Servicio 4 de 5">
-              <div className="slide-title">ERP</div>
-              <p className="slide-desc">SAP, Oracle o Dynamics. Nos integramos a tu plataforma actual sin reemplazarla ni cambiar tu forma de trabajar.</p>
-            </div>
-            <div className="hero-service-slide" role="group" aria-label="Servicio 5 de 5">
-              <div className="slide-title">Power BI</div>
-              <p className="slide-desc">Reportes interactivos y dashboards personalizados conectados directamente a tus fuentes de datos.</p>
-            </div>
-            <div className="slide-dots" role="tablist" aria-label="Navegar servicios">
-              <button className="slide-dot active" aria-label="Tesorería" role="tab" />
-              <button className="slide-dot" aria-label="Finanzas" role="tab" />
-              <button className="slide-dot" aria-label="Operaciones" role="tab" />
-              <button className="slide-dot" aria-label="ERP" role="tab" />
-              <button className="slide-dot" aria-label="Power BI" role="tab" />
+
+            {/* SLIDE 2: Nozoma */}
+            <div className="hero-slide" id="heroSlide1">
+              <div className="hero-tag">
+                <span className="hero-tag-dot" />
+                Nuevo · Plataforma de cursos online
+              </div>
+              <p className="hero-display">
+                Procesos que<br />
+                se hacen <span className="hl-proceso">solos.</span><br />
+                Decisiones que<br />
+                se toman <span className="hl-conexion">rápido.</span>
+              </p>
+              <p className="hero-sub">
+                Convertimos flujos manuales en sistemas automáticos.<br />
+                <span className="bright">— Sin cambiar tu ERP. Sin teoría vacía. —</span>
+              </p>
+
+              {/* pills desktop */}
+              <div className="hero-pills-wrap">
+                <div className="hero-pills-label">Trabajamos con</div>
+                <div className="hero-pills">
+                  <span className="pill">Tesorería<span className="pill-tip">Gestión de flujos de caja, pagos y cobranzas. Automatizamos los procesos de conciliación y reportes que consumen horas diarias en equipos financieros.</span></span>
+                  <span className="pill">Finanzas<span className="pill-tip">Análisis financiero, presupuestos y proyecciones. Conectamos tus datos en dashboards que se actualizan solos, sin exportaciones manuales.</span></span>
+                  <span className="pill">Operaciones<span className="pill-tip">Procesos logísticos, inventario y coordinación de equipos. Convertimos flujos manuales repetitivos en sistemas automáticos.</span></span>
+                  <span className="pill">ERP<span className="pill-tip">Sistemas como SAP, Oracle o Dynamics. Nos integramos a tu plataforma actual sin necesidad de reemplazarla.</span></span>
+                  <span className="pill">Power BI<span className="pill-tip">Herramienta de visualización de Microsoft. Construimos reportes interactivos conectados directamente a tus fuentes de datos.</span></span>
+                </div>
+              </div>
+
+              {/* slider servicios mobile */}
+              <div className="hero-service-slider" id="serviceSlider" aria-label="Servicios de Nozoma">
+                <div className="hero-service-slide active" role="group" aria-label="Servicio 1 de 5">
+                  <div className="slide-title">Tesorería</div>
+                  <p className="slide-desc">Gestión de flujos de caja, pagos y cobranzas. Automatizamos la conciliación y reportes que consumen horas diarias.</p>
+                </div>
+                <div className="hero-service-slide" role="group" aria-label="Servicio 2 de 5">
+                  <div className="slide-title">Finanzas</div>
+                  <p className="slide-desc">Análisis financiero, presupuestos y proyecciones. Dashboards que se actualizan solos, sin exportaciones manuales.</p>
+                </div>
+                <div className="hero-service-slide" role="group" aria-label="Servicio 3 de 5">
+                  <div className="slide-title">Operaciones</div>
+                  <p className="slide-desc">Procesos logísticos, inventario y coordinación. Flujos manuales repetitivos convertidos en sistemas automáticos.</p>
+                </div>
+                <div className="hero-service-slide" role="group" aria-label="Servicio 4 de 5">
+                  <div className="slide-title">ERP</div>
+                  <p className="slide-desc">SAP, Oracle o Dynamics. Nos integramos a tu plataforma actual sin reemplazarla ni cambiar tu forma de trabajar.</p>
+                </div>
+                <div className="hero-service-slide" role="group" aria-label="Servicio 5 de 5">
+                  <div className="slide-title">Power BI</div>
+                  <p className="slide-desc">Reportes interactivos y dashboards personalizados conectados directamente a tus fuentes de datos.</p>
+                </div>
+                <div className="slide-dots" role="tablist" aria-label="Navegar servicios">
+                  <button className="slide-dot active" aria-label="Tesorería" role="tab" />
+                  <button className="slide-dot" aria-label="Finanzas" role="tab" />
+                  <button className="slide-dot" aria-label="Operaciones" role="tab" />
+                  <button className="slide-dot" aria-label="ERP" role="tab" />
+                  <button className="slide-dot" aria-label="Power BI" role="tab" />
+                </div>
+              </div>
+
+              <div className="hero-dots">
+                <button className="hero-dot" data-slide="0" aria-label="Ver Portafolio con Propósito" />
+                <button className="hero-dot active" data-slide="1" aria-label="Ver Nozoma" />
+              </div>
             </div>
           </div>
         </div>
@@ -98,9 +142,9 @@ export default function Home() {
       {/* ═══ SERVICIOS ═════════════════════════════════════════ */}
       <section className="section" id="servicios">
         <div className="section-inner">
-          <p className="section-label reveal">Servicios</p>
+          <p className="section-label reveal">En lo que trabajamos</p>
           <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>Lo que <span className="hl">hacemos</span></h2>
-          <p className="section-sub reveal" style={{ transitionDelay: '.1s' }}>Tres servicios construidos sobre un principio: liberar tu tiempo para lo que realmente importa.</p>
+          <p className="section-sub reveal" style={{ transitionDelay: '.1s' }}>Tres áreas construidas sobre un mismo principio: liberar tiempo para lo que realmente importa.</p>
           <div className="services-grid">
 
             <a href="#contacto" className="service-card reveal" style={{ transitionDelay: '.1s' }}>
@@ -112,14 +156,12 @@ export default function Home() {
                       <stop offset="100%" stopColor="#E3687D" />
                     </linearGradient>
                   </defs>
-                  <path d="M5 12h14" /><path d="M15 7l5 5-5 5" />
-                  <path d="M3 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z" />
-                  <path d="M3 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2z" />
+                  <path d="M12 3L2 8l10 5 10-5-10-5z" /><path d="M2 13l10 5 10-5" /><path d="M2 18l10 5 10-5" />
                 </svg>
               </div>
-              <div className="service-name">Automatización de procesos</div>
-              <p className="service-desc">Flujos manuales convertidos en sistemas que corren solos. Adaptable a cualquier ERP, sin necesidad de cambiar tu stack.</p>
-              <div className="service-for">Equipos financieros y operativos</div>
+              <div className="service-name">Educación</div>
+              <p className="service-desc">Plataformas, relatorías y cursos aplicados a contextos reales. Desde evaluación docente hasta formación corporativa.</p>
+              <div className="service-for">Instituciones y organizaciones</div>
             </a>
 
             <a href="#contacto" className="service-card reveal" style={{ transitionDelay: '.18s' }}>
@@ -131,13 +173,13 @@ export default function Home() {
                       <stop offset="100%" stopColor="#E3687D" />
                     </linearGradient>
                   </defs>
-                  <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" />
-                  <rect x="3" y="14" width="7" height="7" rx="1" /><path d="M14 17h7M17 14v7" />
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M3 9h18" /><path d="M8 14l-2 2 2 2" /><path d="M13 14l2 2-2 2" />
                 </svg>
               </div>
-              <div className="service-name">Reportería a medida</div>
-              <p className="service-desc">Dashboards conectados a tus datos reales. No plantillas genéricas — soluciones construidas sobre tu lógica de negocio.</p>
-              <div className="service-for">Gerencias y áreas decisionales</div>
+              <div className="service-name">Diseño y desarrollo web</div>
+              <p className="service-desc">Sitios, plataformas e interfaces construidas a medida. Identidad visual y experiencia de usuario en un mismo lugar.</p>
+              <div className="service-for">Marcas y proyectos digitales</div>
             </a>
 
             <a href="#contacto" className="service-card reveal" style={{ transitionDelay: '.26s' }}>
@@ -149,12 +191,13 @@ export default function Home() {
                       <stop offset="100%" stopColor="#E3687D" />
                     </linearGradient>
                   </defs>
-                  <path d="M12 3L2 8l10 5 10-5-10-5z" /><path d="M2 13l10 5 10-5" /><path d="M2 18l10 5 10-5" />
+                  <rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" /><path d="M14 17h7M17 14v7" />
                 </svg>
               </div>
-              <div className="service-name">Formación y transferencia</div>
-              <p className="service-desc">Relatorías, talleres y cursos aplicados a tu contexto. Cada contenido parte de casos reales.</p>
-              <div className="service-for">Organizaciones y profesionales</div>
+              <div className="service-name">Finanzas, Datos y Transformación Digital</div>
+              <p className="service-desc">Python, SQL, Power BI y automatización aplicados a la gestión financiero-contable. Datos convertidos en decisiones, no en planillas.</p>
+              <div className="service-for">Equipos financieros y de gestión</div>
             </a>
 
           </div>
@@ -164,29 +207,79 @@ export default function Home() {
       {/* ═══ CASO REAL ═════════════════════════════════════════ */}
       <section className="section section-alt" id="caso">
         <div className="section-inner">
-          <div className="caso-grid">
-            <div>
-              <p className="section-label reveal">Caso real</p>
-              <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>
-                De 4 horas a<br className="br-desktop" /> solo <span className="hl">2 minutos</span>
-              </h2>
-              <div className="caso-text reveal" style={{ transitionDelay: '.1s' }}>
-                <p>Un proceso crítico de tesorería: 18 pasos manuales, 9 fuentes de datos, una persona que no podía salir de vacaciones.</p>
-                <p>Este caso no es hipotético. Es el punto de partida de Nozoma.</p>
+          <p className="section-label reveal">Caso real</p>
+
+          <div className="caso-slides">
+            <button className="caso-arrow caso-arrow-prev" id="casoPrev" aria-label="Slide anterior" style={{ display: 'none' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button className="caso-arrow caso-arrow-next" id="casoNext" aria-label="Siguiente slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+
+            {/* SLIDE 1: Portafolio con Propósito */}
+            <div className="caso-slide active" id="casoSlide0">
+              <div className="caso-grid">
+                <div>
+                  <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>
+                    Portafolio con<br className="br-desktop" /> <span className="hl">Propósito</span>
+                  </h2>
+                  <div className="caso-text reveal" style={{ transitionDelay: '.1s' }}>
+                    <p>La plataforma que acompaña a los y las docentes durante todo el proceso de Evaluación Docente — Clase Grabada, evaluaciones en línea y construcción del portafolio, mes a mes.</p>
+                    <p>Este proyecto ya está en curso. Es la aplicación directa de cómo Nozoma piensa los procesos.</p>
+                  </div>
+                </div>
+                <div className="caso-metrics reveal" style={{ transitionDelay: '.15s' }}>
+                  <div className="caso-metric caso-metric-highlight">
+                    <div className="caso-metric-num" data-target="6" data-suffix=" meses">0 meses</div>
+                    <div className="caso-metric-label">De acompañamiento continuo, mes a mes durante todo el proceso.</div>
+                  </div>
+                  <div className="caso-metric">
+                    <div className="caso-metric-num" data-target="100" data-suffix="%">0%</div>
+                    <div className="caso-metric-label">Evaluaciones en línea, sin papeles ni planillas sueltas</div>
+                  </div>
+                  <div className="caso-metric" style={{ gridColumn: '1 / -1' }}>
+                    <div className="caso-metric-num" data-target="1" data-suffix=" plataforma">0</div>
+                    <div className="caso-metric-label">Para Clase Grabada, Portafolio y seguimiento — en vez de procesos dispersos entre correos y documentos.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="caso-dots">
+                <button className="caso-dot active" data-slide="0" aria-label="Ver Portafolio con Propósito" />
+                <button className="caso-dot" data-slide="1" aria-label="Ver caso de tesorería" />
               </div>
             </div>
-            <div className="caso-metrics reveal" style={{ transitionDelay: '.15s' }}>
-              <div className="caso-metric caso-metric-highlight">
-                <div className="caso-metric-num" data-target="2" data-suffix=" min">0 min</div>
-                <div className="caso-metric-label">El mismo proceso que antes consumía 245 minutos.</div>
+
+            {/* SLIDE 2: Caso tesorería */}
+            <div className="caso-slide" id="casoSlide1">
+              <div className="caso-grid">
+                <div>
+                  <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>
+                    De 4 horas a<br className="br-desktop" /> solo <span className="hl">2 minutos</span>
+                  </h2>
+                  <div className="caso-text reveal" style={{ transitionDelay: '.1s' }}>
+                    <p>Un proceso crítico de tesorería: 18 pasos manuales, 9 fuentes de datos, una persona que no podía salir de vacaciones.</p>
+                    <p>Este caso no es hipotético. Es el punto de partida de Nozoma.</p>
+                  </div>
+                </div>
+                <div className="caso-metrics reveal" style={{ transitionDelay: '.15s' }}>
+                  <div className="caso-metric caso-metric-highlight">
+                    <div className="caso-metric-num" data-target="2" data-suffix=" min">0 min</div>
+                    <div className="caso-metric-label">El mismo proceso que antes consumía 245 minutos.</div>
+                  </div>
+                  <div className="caso-metric">
+                    <div className="caso-metric-num" data-target="99" data-suffix="%">0%</div>
+                    <div className="caso-metric-label">Menos tiempo por ejecución</div>
+                  </div>
+                  <div className="caso-metric" style={{ gridColumn: '1 / -1' }}>
+                    <div className="caso-metric-num" data-prefix="USD " data-target="19" data-suffix="K">USD 0K</div>
+                    <div className="caso-metric-label">Ahorrados al año en caso real</div>
+                  </div>
+                </div>
               </div>
-              <div className="caso-metric">
-                <div className="caso-metric-num" data-target="99" data-suffix="%">0%</div>
-                <div className="caso-metric-label">Menos tiempo por ejecución</div>
-              </div>
-              <div className="caso-metric" style={{ gridColumn: '1 / -1' }}>
-                <div className="caso-metric-num" data-prefix="USD " data-target="19" data-suffix="K">USD 0K</div>
-                <div className="caso-metric-label">Ahorrados al año en caso real</div>
+              <div className="caso-dots">
+                <button className="caso-dot" data-slide="0" aria-label="Ver Portafolio con Propósito" />
+                <button className="caso-dot active" data-slide="1" aria-label="Ver caso de tesorería" />
               </div>
             </div>
           </div>
@@ -206,10 +299,10 @@ export default function Home() {
                 <div className="team-avatar" style={{ background: 'linear-gradient(135deg, var(--profundidad), var(--sistema))' }}>F</div>
                 <div className="team-meta">
                   <div className="team-name">Francisco Pérez</div>
-                  <div className="team-role">Cofundador · Desarrollo</div>
+                  <div className="team-role">Fundador · Tecnología y Finanzas</div>
                 </div>
               </div>
-              <p className="team-work">Programador a cargo del desarrollo técnico. Construye e implementa los sistemas que hacen que los procesos de Nozoma corran solos, de forma estable.</p>
+              <p className="team-work">Contador e Ingeniero en Informática. Lidera Nozoma junto a Sergio, combinando mirada financiera y técnica para acompañar a quienes confían en nosotros a tomar mejores decisiones.</p>
               <a className="team-email" href="mailto:fperez@nozoma.cl">fperez@nozoma.cl</a>
             </div>
 
@@ -218,10 +311,10 @@ export default function Home() {
                 <div className="team-avatar" style={{ background: 'linear-gradient(135deg, var(--sistema), #9B7FD0)' }}>S</div>
                 <div className="team-meta">
                   <div className="team-name">Sergio Pérez</div>
-                  <div className="team-role">Cofundador · Automatización</div>
+                  <div className="team-role">Fundador · Formación y Diseño Instruccional</div>
                 </div>
               </div>
-              <p className="team-work">Especialista en automatización de procesos financieros y operativos. Convierte flujos manuales complejos en sistemas eficientes, escalables y confiables.</p>
+              <p className="team-work">Docente con vocación por enseñar y simplificar lo complejo. Lidera Nozoma junto a Francisco, llevando la formación y la pedagogía al centro de cada proceso de cambio que una organización decide emprender.</p>
               <a className="team-email" href="mailto:sperez@nozoma.cl">sperez@nozoma.cl</a>
             </div>
 
@@ -230,10 +323,10 @@ export default function Home() {
                 <div className="team-avatar" style={{ background: 'linear-gradient(135deg, #9B7FD0, var(--conexion))' }}>N</div>
                 <div className="team-meta">
                   <div className="team-name">Nicole Briones</div>
-                  <div className="team-role">Colaboradora · Estrategia</div>
+                  <div className="team-role">Aliada Nozoma · Docente - Mgtr.</div>
                 </div>
               </div>
-              <p className="team-work">Lidera la relación con clientes y la estrategia comercial. Traduce las necesidades reales de cada organización en soluciones concretas y aplicables.</p>
+              <p className="team-work">Magíster en Currículum y Evaluación, tramo de evaluación docente experto 2 y evaluadora de portafolios. Apoya los programas educativos y materiales que dan sustento pedagógico a cada solución de Nozoma.</p>
               <a className="team-email" href="mailto:nbriones@nozoma.cl">nbriones@nozoma.cl</a>
             </div>
 
@@ -242,10 +335,10 @@ export default function Home() {
                 <div className="team-avatar" style={{ background: 'linear-gradient(135deg, var(--conexion), var(--proceso))' }}>F</div>
                 <div className="team-meta">
                   <div className="team-name">Francisco Ponce</div>
-                  <div className="team-role">Colaborador · Diseño</div>
+                  <div className="team-role">Aliado Nozoma · Identidad y Diseño</div>
                 </div>
               </div>
-              <p className="team-work">Diseñador a cargo de la identidad visual y la experiencia de usuario. Construye la comunicación gráfica que conecta a Nozoma con cada persona.</p>
+              <p className="team-work">Diseñador con ojo para encontrar lo simple detrás de lo complejo. En Nozoma construyó una identidad visual completa desde cero, capaz de traducir procesos técnicos en una comunicación clara y cercana para cualquier persona.</p>
               <a className="team-email" href="mailto:fponce@nozoma.cl">fponce@nozoma.cl</a>
             </div>
 
@@ -258,12 +351,12 @@ export default function Home() {
         <canvas id="cursos-canvas" aria-hidden="true" />
         <div className="cursos-inner">
           <p className="section-label reveal">Plataforma educativa</p>
-          <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>Aprende a tu ritmo<br className="br-desktop" /> con <span className="hl">xlcurso</span></h2>
+          <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>Aprende a tu ritmo<br className="br-desktop" /> con <span className="hl">Nozoma Cursos</span></h2>
           <p className="section-sub reveal" style={{ transitionDelay: '.1s' }}>Formación aplicada a tu trabajo real. Sin fricciones — accedes con tu RUT y sigues desde donde lo dejaste.</p>
           <div className="reveal" style={{ transitionDelay: '.15s' }}>
             <div className="cursos-glass">
               <div>
-                <div className="cursos-eyebrow">Disponible ahora · xlcurso</div>
+                <div className="cursos-eyebrow">Disponible ahora · Nozoma Cursos</div>
                 <div className="cursos-title">Tu próxima clase<br />ya está lista</div>
                 <p className="cursos-sub">Sigue aprendiendo con contenido diseñado para contextos reales. Con seguimiento de progreso y soporte directo.</p>
               </div>
@@ -307,13 +400,13 @@ export default function Home() {
         <div className="footer-mesh-bg" aria-hidden="true" dangerouslySetInnerHTML={{ __html: MESH_SVG }} />
         <div className="footer-inner">
           <div>
-            <div className="footer-brand-name"><img src="/logo.png" alt="Nozoma" /></div>
+            <div className="footer-brand-name"><img src="/logo-footer.png" alt="Nozoma" /></div>
             <p className="footer-tagline">Tecnología al servicio de las decisiones que importan. Santiago, Chile.</p>
           </div>
           <div className="footer-col">
             <div className="footer-col-title">Contacto</div>
             <a href="mailto:contacto@nozoma.cl">contacto@nozoma.cl</a>
-            <a href="https://cursos.nozoma.cl">Plataforma xlcurso</a>
+            <a href="https://cursos.nozoma.cl">Nozoma Cursos</a>
           </div>
           <div className="footer-col">
             <div className="footer-col-title">Legal</div>
