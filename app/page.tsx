@@ -221,7 +221,7 @@ export default function Home() {
             <div className="caso-slide active" id="casoSlide0">
               <div className="caso-grid">
                 <div>
-                  <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>
+                  <h2 className="section-title reveal caso-title" style={{ transitionDelay: '.05s' }}>
                     Portafolio con<br className="br-desktop" /> <span className="hl">Propósito</span>
                   </h2>
                   <div className="caso-text reveal" style={{ transitionDelay: '.1s' }}>
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="caso-slide" id="casoSlide1">
               <div className="caso-grid">
                 <div>
-                  <h2 className="section-title reveal" style={{ transitionDelay: '.05s' }}>
+                  <h2 className="section-title reveal caso-title" style={{ transitionDelay: '.05s' }}>
                     De 4 horas a<br className="br-desktop" /> solo <span className="hl">2 minutos</span>
                   </h2>
                   <div className="caso-text reveal" style={{ transitionDelay: '.1s' }}>
@@ -372,7 +372,7 @@ export default function Home() {
           <p className="section-label reveal">Contacto</p>
           <div className="contact-grid reveal" style={{ transitionDelay: '.1s' }}>
             <div className="contact-info">
-              <h2 className="section-title">¿Tienes un proceso que<br className="br-desktop" /> debería <span className="hl">hacerse solo?</span></h2>
+              <h2 className="section-title contact-title">¿Tienes un proceso que<br className="br-desktop" /> debería <span className="hl">hacerse solo?</span></h2>
               <p>Conversemos 30 minutos. Sin compromiso. Sin vender nada antes de entender tu problema.</p>
               <p>Cuéntanos qué está ocupando tu tiempo hoy y encontramos juntos si hay una solución.</p>
             </div>
